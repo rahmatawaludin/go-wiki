@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frontpage</title>
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+  <h1>Frontpage</h1>
+  <p>Welcome to the Go Wiki!</p>
+  <ul>
+    {{ range $i, $e := .}}
+    <li>
+      <a href="/view/{{$e.Name}}">{{$e.Name}}</a>
+    </li>
+    {{ end }}
+  </ul>
+</body>
+</html>
